@@ -172,7 +172,6 @@ strong {
     transition: all var(--transition-base);
     cursor: pointer;
     text-align: center;
-    white-space: nowrap;
 }
 
 .btn-primary {
@@ -2055,5 +2054,13 @@ strong {
 
     section {
         page-break-inside: avoid;
+    }
+}
+
+/* ========== DESKTOP OPTIMIZATION ========== */
+/* Keep button text on single line on desktop where there's space */
+@media (min-width: 769px) {
+    .btn {
+        white-space: nowrap;
     }
 }
