@@ -83,6 +83,9 @@ body {
     color: var(--color-text);
     background-color: var(--color-bg);
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 img {
@@ -1691,6 +1694,24 @@ strong {
 }
 
 @media (max-width: 768px) {
+
+    /* Reduce section padding on mobile */
+    :root {
+        --section-padding: clamp(40px, 10vw, 64px);
+    }
+
+    /* Hero section mobile optimizations */
+    .hero {
+        min-height: auto;
+        padding: 56px 0 40px;
+    }
+
+    .hero-video {
+        max-width: 90%;
+        width: 90%;
+        margin: 0 auto;
+    }
+
     .hero-subtitle {
         flex-direction: column;
         align-items: flex-start;
@@ -1701,38 +1722,101 @@ strong {
         display: none;
     }
 
+    .hero-features {
+        margin-bottom: 20px;
+    }
+
+    .hero-features li {
+        font-size: 14px;
+    }
+
+    .hero-price {
+        margin-bottom: 24px;
+    }
+
     .hero-cta-group {
         flex-direction: column;
     }
 
     .hero-cta-group .btn {
         width: 100%;
+        /* Ensure minimum touch target of 44px */
+        min-height: 44px;
+        padding: 14px 24px;
     }
 
+    /* Ensure all buttons meet touch target requirements */
+    .btn {
+        min-height: 44px;
+        padding: 12px 20px;
+    }
+
+    .btn-lg {
+        min-height: 48px;
+        padding: 14px 28px;
+    }
+
+    /* Better text sizing on mobile */
+    .hero-title {
+        font-size: clamp(28px, 8vw, 36px);
+        margin-bottom: 14px;
+    }
+
+    .section-title {
+        font-size: clamp(22px, 6vw, 26px);
+    }
+
+    /* Exterior section mobile */
+    .exterior-hook {
+        font-size: clamp(24px, 6vw, 32px);
+    }
+
+    /* Features grid mobile */
     .features-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
+    .feature-card {
+        padding: 28px 24px;
+    }
+
+    /* Benefits mobile */
     .benefits-list {
         grid-template-columns: 1fr;
+        gap: 24px;
     }
 
+    .benefits-grid {
+        gap: 48px;
+    }
+
+    /* Testimonials mobile */
     .testimonials-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .testimonial-card-cta {
         grid-column: span 1;
     }
 
+    /* Table responsiveness */
     .comparison-table-wrapper {
         overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .comparison-table {
         min-width: 500px;
     }
 
+    .specs-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Contact form mobile */
     .contact-form {
         padding: 28px 24px;
     }
@@ -1741,6 +1825,7 @@ strong {
         grid-template-columns: 1fr;
     }
 
+    /* Footer mobile */
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 32px;
@@ -1756,6 +1841,7 @@ strong {
         margin-right: auto;
     }
 
+    /* WhatsApp widget mobile */
     .whatsapp-tooltip {
         display: none;
     }
@@ -1774,6 +1860,30 @@ strong {
 @media (max-width: 480px) {
     :root {
         --gutter: 16px;
+        --section-padding: clamp(32px, 8vw, 48px);
+    }
+
+    /* Hero adjustments for very small screens */
+    .hero {
+        padding: 48px 0 32px;
+    }
+
+    .hero-badge {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+
+    .hero-title {
+        font-size: clamp(24px, 7vw, 32px);
+        margin-bottom: 12px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    .hero-features li {
+        font-size: 13px;
     }
 
     .hero-price {
@@ -1784,27 +1894,94 @@ strong {
         font-size: 22px;
     }
 
+    .price-label,
+    .price-note {
+        font-size: 13px;
+    }
+
+    .hero-video {
+        max-width: 95%;
+        width: 95%;
+    }
+
+    /* Button sizing for small screens */
+    .btn {
+        font-size: 15px;
+        padding: 12px 20px;
+    }
+
+    .btn-lg {
+        font-size: 16px;
+        padding: 14px 24px;
+    }
+
+    /* Section headers */
+    .section-eyebrow {
+        font-size: 12px;
+    }
+
+    .section-title {
+        font-size: clamp(20px, 5.5vw, 24px);
+        margin-bottom: 12px;
+    }
+
+    .section-description {
+        font-size: 15px;
+    }
+
+    /* Cards and content blocks */
     .feature-card {
         padding: 24px 20px;
     }
 
+    .feature-card-title {
+        font-size: 16px;
+    }
+
+    .feature-card-text {
+        font-size: 13px;
+    }
+
+    /* Specs table */
     .specs-table th,
     .specs-table td {
         padding: 14px 16px;
+        font-size: 14px;
     }
 
+    /* FAQ */
     .faq-question {
         padding: 16px 18px;
+        font-size: 15px;
     }
 
     .faq-answer {
         padding: 0 18px 16px;
+        font-size: 14px;
     }
 
+    /* Testimonials */
     .testimonial-card {
         padding: 24px 20px;
     }
 
+    .testimonial-content p {
+        font-size: 14px;
+    }
+
+    /* Contact form */
+    .contact-form {
+        padding: 24px 20px;
+    }
+
+    input,
+    textarea,
+    select {
+        font-size: 16px;
+        /* Prevents zoom on iOS */
+    }
+
+    /* Lightbox controls */
     .lightbox-prev,
     .lightbox-next {
         width: 40px;
@@ -1817,6 +1994,17 @@ strong {
 
     .lightbox-next {
         right: 12px;
+    }
+
+    /* Footer adjustments */
+    .footer-brand h4 {
+        font-size: 18px;
+    }
+
+    .footer-location h5,
+    .footer-links h5,
+    .footer-contact h5 {
+        font-size: 16px;
     }
 }
 
