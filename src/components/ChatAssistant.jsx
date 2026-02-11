@@ -258,7 +258,8 @@ const ChatAssistant = () => {
                     }
                     .chat-assistant-wrapper {
                         bottom: 20px;
-                        left: 20px;
+                        right: 20px;
+                        left: auto;
                     }
                 }
             `}</style>
