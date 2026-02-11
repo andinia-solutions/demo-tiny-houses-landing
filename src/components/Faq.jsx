@@ -85,7 +85,7 @@ const Faq = () => {
                             </svg>
                         </summary>
                         <div className="faq-answer">
-                            <p>Precio referencia: <strong>USD 29.900 puesta en la puerta de tu casa</strong> (no incluye
+                            <p>Precio referencia: <strong>USD 32.000 puesta en la puerta de tu casa</strong> (no incluye
                                 platea o pilotes). La cotización final incluye transporte y aranceles según ubicación.</p>
                         </div>
                     </details>

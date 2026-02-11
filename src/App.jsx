@@ -102,16 +102,6 @@ function App() {
         };
     }, []);
 
-    // Console Branding
-    useEffect(() => {
-        console.log('%c🏡 Casa Plegable 20FT',
-            'font-size: 24px; font-weight: bold; color: #0BA398;');
-        console.log('%cMóvil, lista para vivir',
-            'font-size: 14px; color: #55606A;');
-        console.log('%cDesarrollado con 💚',
-            'font-size: 12px; color: #0F766E;');
-    }, []);
-
     return (
         <>
             <Hero />

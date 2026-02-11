@@ -68,7 +68,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>&copy; 2024 Casa Plegable 20FT. Todos los derechos reservados.</p>
+                    <p>&copy; 2024 TinyHouses. Todos los derechos reservados.</p>
                     <p className="footer-legal">Las imágenes son ilustrativas. Especificaciones sujetas a cambios sin previo
                         aviso.</p>
                 </div>

@@ -28,7 +28,7 @@ const Comparison = () => {
                             </tr>
                             <tr>
                                 <td>Costo inicial</td>
-                                <td className="highlight-col"><strong>Desde USD 29.900</strong></td>
+                                <td className="highlight-col"><strong>Desde USD 32.000</strong></td>
                                 <td>Variable, generalmente mayor</td>
                             </tr>
                             <tr>

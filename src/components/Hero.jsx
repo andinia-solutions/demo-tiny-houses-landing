@@ -84,7 +84,7 @@ const Hero = () => {
 
                     <p className="hero-price">
                         <span className="price-label">Precio referencial:</span>
-                        <span className="price-value">USD 29.900</span>
+                        <span className="price-value">USD 32.000</span>
                         <span className="price-note">— puesta en la puerta de tu casa (no incluye platea o pilotes)</span>
                     </p>
 
