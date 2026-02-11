@@ -1,6 +1,8 @@
 import React from 'react';
+import { useChat } from '../context/ChatContext';
 
 const Specs = () => {
+    const { openChat } = useChat();
     return (
         <section className="specs" id="ficha-tecnica">
             <div className="container">
@@ -12,7 +14,7 @@ const Specs = () => {
 
                         <a href="#" className="btn btn-primary specs-download" onClick={(e) => {
                             e.preventDefault();
-                            alert('El PDF de la ficha técnica estará disponible próximamente. Por favor, contactanos por WhatsApp para más información.');
+                            openChat();
                         }}>
                             <svg className="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />

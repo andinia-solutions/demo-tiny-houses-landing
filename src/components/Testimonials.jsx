@@ -1,6 +1,8 @@
 import React from 'react';
+import { useChat } from '../context/ChatContext';
 
 const Testimonials = () => {
+    const { openChat } = useChat();
     return (
         <section className="testimonials" id="testimonios">
             <div className="container">
@@ -55,10 +57,9 @@ const Testimonials = () => {
                         <div className="testimonial-content">
                             <h4>¿Tenés un proyecto similar?</h4>
                             <p>Contanos tu caso y te asesoramos sin compromiso.</p>
-                            <a href="https://wa.me/54911XXXXXXXX?text=Hola%20quiero%20info%20sobre%20Casa%20Plegable%2020FT%20(37m2).%20Estoy%20en%3A%20[CIUDAD]&utm_source=landing&utm_medium=web&utm_campaign=plegable20ft"
-                                class="btn btn-primary" target="_blank" rel="noopener">
-                                Enviar mi consulta
-                            </a>
+                            <button onClick={openChat} className="btn btn-primary">
+                                Consultar con asistente virtual
+                            </button>
                         </div>
                     </div>
                 </div>

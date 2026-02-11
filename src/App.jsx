@@ -33,7 +33,17 @@ const galleryImages = [
     }
 ];
 
+import { ChatProvider } from './context/ChatContext';
+
 function App() {
+    return (
+        <ChatProvider>
+            <AppContent />
+        </ChatProvider>
+    );
+}
+
+function AppContent() {
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -83,8 +93,6 @@ function App() {
         });
 
         // Add the animate-in styles dynamically if not in CSS
-        // But better to check if it's already in index.css?
-        // It was added by script in original code.
         const style = document.createElement('style');
         style.textContent = `
             .animate-in {

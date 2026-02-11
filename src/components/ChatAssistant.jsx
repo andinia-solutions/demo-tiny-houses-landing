@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ChatKit, useChatKit } from '@openai/chatkit-react';
 import { v4 as uuidv4 } from 'uuid';
+import { useChat } from '../context/ChatContext';
 
 const ChatAssistant = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const { isOpen, setIsOpen, toggleChat, closeChat } = useChat();
     const [userId] = useState(() => {
         let id = localStorage.getItem('chatkit_user_id');
         if (!id) {
@@ -65,7 +66,7 @@ const ChatAssistant = () => {
             {/* Toggle Button */}
             <button
                 className={`chat-toggle-btn ${isOpen ? 'active' : ''}`}
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={toggleChat}
                 aria-label="Toggle chat assistant"
             >
                 {isOpen ? (
@@ -83,7 +84,7 @@ const ChatAssistant = () => {
             {/* Chat Window */}
             <div className={`chatkit-window ${isOpen ? 'open' : ''}`}>
                 <div className="chatkit-header">
-                    <button className="chatkit-back-btn" onClick={() => setIsOpen(false)} aria-label="Volver">
+                    <button className="chatkit-back-btn" onClick={closeChat} aria-label="Volver">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                             <polyline points="15 18 9 12 15 6"></polyline>
                         </svg>
@@ -91,7 +92,7 @@ const ChatAssistant = () => {
                     <div className="header-info">
                         <span className="dot"></span>
                         <div>
-                            <h3>Soluciones Habitacionales</h3>
+                            <h3>Asistente Virtual</h3>
                             <p>En línea • Responde al instante</p>
                         </div>
                     </div>
@@ -127,7 +128,7 @@ const ChatAssistant = () => {
                 }
 
                 .chat-toggle-btn::after {
-                    content: 'Chateá con nuestro asistente';
+                    content: 'Hablá con nuestro asistente virtual';
                     position: absolute;
                     right: 75px;
                     background: white;
