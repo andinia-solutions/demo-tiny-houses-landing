@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="container">
                 <div className="footer-grid">
                     <div className="footer-brand">
-                        <h4>Casa Plegable 20FT</h4>
+                        <h4>TinyHouses</h4>
                         <p>Tu casa lista para vivir en 24 horas. Móvil, resistente y pensada para durar.</p>
                         <div className="footer-social">
                             <a href="#" aria-label="Instagram" className="social-link">

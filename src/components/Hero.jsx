@@ -27,7 +27,7 @@ const Hero = () => {
                     </div>
 
                     <h1 className="hero-title">
-                        Casa plegable 20FT · 37 m²
+                        TinyHouses plegable 20FT · 37 m²
                         <span className="hero-title-accent">Móvil, lista para vivir</span>
                     </h1>
 
