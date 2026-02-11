@@ -27,12 +27,12 @@ const Footer = () => {
                     <div className="footer-location">
                         <h5>Showroom</h5>
                         <address>
-                            <strong>Parque Industrial Neuquén</strong><br />
+                            <strong>Parque Industrial Neuquén</strong> (con cita previa)<br />
                             Neuquén, Argentina<br /><br />
                             <span className="footer-hours">Lun–Vie: 9:00 – 18:00</span><br />
                             <span className="footer-hours">Sáb: 10:00 – 14:00</span>
                         </address>
-                        <a href="https://maps.google.com/?q=Parque+Industrial+Neuquen" target="_blank" rel="noopener"
+                        <a href="https://maps.app.goo.gl/gZx2BoHy1kJ8ysyB9" target="_blank" rel="noopener"
                             className="footer-map-link">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />

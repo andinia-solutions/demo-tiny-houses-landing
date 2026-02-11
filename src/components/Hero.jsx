@@ -23,7 +23,7 @@ const Hero = () => {
                 <div className="hero-content">
                     <div className="hero-badge">
                         <span className="badge-icon">🏡</span>
-                        <span>Showroom en Neuquén — Vení a verla</span>
+                        <span>Showroom en Neuquén (con cita previa) — Vení a verla</span>
                     </div>
 
                     <h1 className="hero-title">
@@ -84,7 +84,7 @@ const Hero = () => {
 
                     <p className="hero-price">
                         <span className="price-label">Precio referencial:</span>
-                        <span className="price-value">USD 35.000</span>
+                        <span className="price-value">USD 29.900</span>
                         <span className="price-note">— puesta en la puerta de tu casa (no incluye platea o pilotes)</span>
                     </p>
 
@@ -114,7 +114,7 @@ const Hero = () => {
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                             <circle cx="12" cy="10" r="3" />
                         </svg>
-                        <p>Visitalo en nuestra sucursal: <strong>Parque Industrial Neuquén</strong> — <a href="#ubicacion"
+                        <p>Visitalo en nuestra sucursal: <strong>Parque Industrial Neuquén</strong> (con cita previa) — <a href="#ubicacion"
                             className="trust-link">Ver ubicación y horarios</a></p>
                     </div>
                 </div>
