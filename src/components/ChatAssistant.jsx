@@ -83,6 +83,11 @@ const ChatAssistant = () => {
             {/* Chat Window */}
             <div className={`chatkit-window ${isOpen ? 'open' : ''}`}>
                 <div className="chatkit-header">
+                    <button className="chatkit-back-btn" onClick={() => setIsOpen(false)} aria-label="Volver">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
                     <div className="header-info">
                         <span className="dot"></span>
                         <div>
@@ -198,6 +203,31 @@ const ChatAssistant = () => {
                     background: white;
                     border-bottom: 1px solid var(--color-border);
                     user-select: none;
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                }
+
+                .chatkit-back-btn {
+                    display: none;
+                    background: none;
+                    border: none;
+                    padding: 8px;
+                    margin: -8px 0 -8px -8px;
+                    cursor: pointer;
+                    color: var(--color-text);
+                    transition: all 0.2s ease;
+                    border-radius: 50%;
+                }
+
+                .chatkit-back-btn:hover {
+                    background: var(--color-accent-light);
+                    color: var(--color-accent);
+                }
+
+                .chatkit-back-btn svg {
+                    width: 24px;
+                    height: 24px;
                 }
 
                 .header-info {
@@ -245,6 +275,11 @@ const ChatAssistant = () => {
                 }
 
                 @media (max-width: 480px) {
+                    .chatkit-back-btn {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
                     .chatkit-window {
                         position: fixed;
                         top: 0;
