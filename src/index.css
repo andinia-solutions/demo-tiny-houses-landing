@@ -74,6 +74,7 @@ html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 body {
@@ -169,7 +170,6 @@ strong {
     transition: all var(--transition-base);
     cursor: pointer;
     text-align: center;
-    white-space: nowrap;
 }
 
 .btn-primary {
@@ -1596,15 +1596,23 @@ strong {
 @media (max-width: 1024px) {
     .hero-grid {
         grid-template-columns: 1fr;
-        gap: 48px;
+        text-align: center;
+        gap: 32px;
+    }
+
+    .hero-content {
+        margin: 0 auto;
     }
 
     .hero-visual {
         order: -1;
+        margin-top: 32px;
+        padding: 0 12px;
     }
 
-    .hero-image {
-        max-width: 400px;
+    .hero-video {
+        max-width: 95%;
+        width: 95%;
     }
 
     .hero-scroll-indicator {
@@ -1776,12 +1784,50 @@ strong {
         --gutter: 16px;
     }
 
+    /* Hero adjustments for very small screens */
+    .hero {
+        padding: 48px 0 32px;
+    }
+
+    .hero-badge {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+
+    .hero-title {
+        font-size: clamp(24px, 7vw, 32px);
+        margin-bottom: 12px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+        align-items: center; /* Center these on very small screens */
+        text-align: center;
+    }
+
+    .hero-features li {
+        font-size: 13px;
+        justify-content: center;
+    }
+
     .hero-price {
         padding: 14px 16px;
+        justify-content: center;
     }
 
     .price-value {
         font-size: 22px;
+    }
+
+    .price-label,
+    .price-note {
+        font-size: 13px;
+    }
+
+    /* Section headers */
+    .section-title {
+        font-size: clamp(20px, 5.5vw, 24px);
+        margin-bottom: 12px;
     }
 
     .feature-card {
